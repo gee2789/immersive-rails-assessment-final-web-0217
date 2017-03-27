@@ -1,0 +1,17 @@
+<% if flash[:notice] %>
+<%= flash[:notice] %>
+<% end %>
+
+<h1> Appearances:  Pick Your Poison </h1>
+
+<h2><%= link_to "Create a New Appearance", new_appearance_path %></h2>
+<ul>
+<% @appearances.each do |f| %>
+<ul><h3><%= link_to "Appearance # #{f.id}", edit_appearance_path("#{f.id}") %></h3>
+  <li><%= "Guest: #{f.guest.name}" %></li>
+  <li><%= "Episode Date: #{f.episode.date}" %></li>
+  <li><%= "Rating #{f.rating}" %></li>
+  <li><%= "Producer: #{f.user.username}" %></li>
+</ul>
+<%end%>
+</ul>

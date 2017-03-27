@@ -3,7 +3,15 @@
 <%= form_for @appearance do |f| %>
   <%= f.label :rating %>
   <%= f.number_field :rating, in: (1..5) %>
+  <br>
+  <%= f.label :episode_id %>
   <%= f.collection_select :episode_id, Episode.all, :id, :date %>
+  <br>
+  <%= f.label :guest_id %>
   <%= f.collection_select :guest_id, Guest.all, :id, :name %>
+  <br>
+  <%= f.label :username %>
+  <%= f.collection_select :user_id, User.all, :id, :username %>
+  <br>
   <%= f.submit %>
 <% end %>

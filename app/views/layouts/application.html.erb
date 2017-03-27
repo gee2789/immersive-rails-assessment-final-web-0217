@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <%= "Navigation:" %>
+    <%= link_to "Home", root_path%>
+    <%= link_to "Appearances"  , appearances_path %>
+    <%= link_to "Guests"  , guests_path %>
+    <%= link_to "Episodes"  , episodes_path %>
     <%= yield %>
   </body>
 </html>

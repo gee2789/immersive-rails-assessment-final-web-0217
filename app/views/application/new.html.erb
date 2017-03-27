@@ -1,0 +1,38 @@
+<h1>Howdy! Thanks for doing another assessment.  Again.</h1>
+
+<div class = "welcome">
+  <p>Here's a list of changes I've made:</p>
+</div>
+
+<ul>
+  <li>
+    <div id = "editAppearance">
+      <%= link_to "Allow a user to edit an appearance", appearances_path %>
+      <p>I've created an Index for Appearances for easier navigation.  Just click on the appearance to edit.</p>
+    </div>
+  </li>
+  <li>
+    <div id = "addValidations">
+      <%= link_to "Add Validations for Appearances to only allow rating 1 and 5", appearances_path %>
+      <p> I included a validation_inclusion_of statment in the Appearance model.  Honest!  You can confirm by trying to edit the Apperance rating to 6.  You should see an error message.</p>
+    </div>
+  </li>
+  <li>
+    <div id = "associateUser">
+      <%= link_to "Associate User to the Appearance Model", new_appearance_path %>
+    <p> I added the User in both the new_appearance as well as the edit_appearance paths.</p>
+    <p> The link above will take you to a new appearance where you can associate the appearance with a user</p>
+    </div>
+  </li>
+  <br>
+  <br>
+  <li>
+    <div id = "extras">
+      <p><b>Extras</b></p>
+      <p>Added Navigation in Layout</p>
+      <p>Added Success and Error Messages for update</p>
+    </div>
+  </li>
+</ul>
+
+</div>
