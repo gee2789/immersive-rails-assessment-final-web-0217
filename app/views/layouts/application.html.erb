@@ -14,6 +14,9 @@
     <%= link_to "Appearances"  , appearances_path %>
     <%= link_to "Guests"  , guests_path %>
     <%= link_to "Episodes"  , episodes_path %>
+    <% if session[:user_id] %>
+    <%= link_to "logout", :controller=> "sessions", :action=> "destroy" %>
+    <%end%>
     <%= yield %>
   </body>
 </html>
